@@ -14,7 +14,8 @@ class PostsController < ApplicationController
 
 		if @post.save
 			#redirect_to @post
-			redirect_to posts_path
+			render :json => @post
+			#redirect_to posts_path
 		else
 			render 'new'
 		end
